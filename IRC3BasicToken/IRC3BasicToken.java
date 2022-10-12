@@ -40,7 +40,7 @@ public class IRC3BasicToken extends IRC3Basic {
         super._mint(Context.getCaller(), _tokenId);
     }
 
-    @External
+    @External(readonly=true)
     public String getURIFromTokenId(BigInteger _tokenId){
         return IdToURI.getOrDefault(_tokenId,"Token ID Not Found");
     }
